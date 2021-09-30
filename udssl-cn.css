@@ -1,0 +1,40 @@
+/* removes banner when clicked */
+.cookie-banner.cookie-fade {
+  opacity: 0;
+  animation-fill-mode: none;
+}
+
+/* stops banner re-appearing */
+.cookie-banner.hidden {
+  display: none;
+}
+
+/* very basic styling of the banner plus the animation properties */
+.cookie-banner {
+  opacity: 0;
+  z-index: 99;
+  animation: initial-hide 1s ease-out 1.5s forwards;
+}
+
+/* animation keyframes that animates the banner in onload */
+@keyframes initial-hide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0px;
+  padding: 10px;
+  background-color: snow;
+  text-align: center;
+  width: 100%;
+}
+
+.cookie-banner p {
+  padding-bottom: 10px;
+}
